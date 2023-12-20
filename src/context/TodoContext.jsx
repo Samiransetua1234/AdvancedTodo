@@ -6,7 +6,7 @@ export const TodoStore = createContext([]);
 const TodoContext = ({ children }) => {
   //! Basic requirements
   const [todolist, setTodolist] = useState(
-    JSON.parse(localStorage.getItem("todolist"))
+    JSON.parse(localStorage.getItem("todolist"))||[]
   );
 
   //! Let's maintain state to store searched text
